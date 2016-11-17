@@ -11,8 +11,8 @@ public class Lesson3Runner {
 
         PrimitiveConverter converter = new PrimitiveConverter();
         converter.floatToChar(234234);
-        converter.intToChar(123);
-        converter.charToInt('*');
+        converter.intToChar(45);
+        converter.charToInt('%');
 
     }
 

@@ -2,7 +2,9 @@ package com.amid88.app;
 import com.amid88.app.utils.converters.PrimitiveConverter;
 import org.junit.Assert;
 import org.junit.Test;
+import org.omg.CORBA.Object;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -11,16 +13,25 @@ import static org.junit.Assert.assertTrue;
 public class ConverterTest {
 
     @Test
-    public void intToCharCastingTest(){
-
+    public void charToIntCastingTest(){
         PrimitiveConverter converter = new PrimitiveConverter();
-        //converter.charToInt();
-        //assertTrue(converter.charToInt('$') instanceof Int);
+        assertEquals(converter.charToInt('*'), 42);
+    }
 
-        //Assert.assertTrue(PrimitiveConverter.);
+    @Test
+    public void intToCharCastingTest(){
+        PrimitiveConverter converter = new PrimitiveConverter();
+        assertEquals(converter.intToChar(37), '%');
+    }
 
+    @Test
+    public void floatToCharCastingTest(){
+        PrimitiveConverter converter = new PrimitiveConverter();
+        assertEquals(converter.floatToChar(45F), '-');
 
     }
+
+
 
 
 }
