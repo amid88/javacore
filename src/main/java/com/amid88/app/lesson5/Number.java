@@ -4,11 +4,12 @@ package com.amid88.app.lesson5;
  * Created by dmitriy on 17.11.16.
  */
 public class Number {
-    public static boolean evenNumber(int n){
+
+    public static String evenNumber(int n){
         if (n % 2 == 0){
-            return true;
+            return "Input number is even";
         }
-        else return false;
+        else return "Input number is odd";
     }
     public static String compareNumbers(int n1, int n2){
         if (n1 == n2){

@@ -13,71 +13,70 @@ public class Lesson5Runner {
 
     public static void main(String args[]) {
 
-        Circle circle = new Circle();
-        Triangle triangle = new Triangle();
-        Number number = new Number();
+        calculatingCircleArea();
+        defineBiggerCircle();
+        isTriangleRightAngled();
+        evenOddNumber();
+        biggerNumber();
+    }
+
+    public static double scannerInputDouble (String s){
+        System.out.println(s);
+        Scanner scannerS = new Scanner(System.in);
+        return scannerS.nextDouble();
+    }
+
+    public static int scannerInputInt (String s) {
+        System.out.println(s);
+        Scanner scannerS = new Scanner(System.in);
+        return scannerS.nextInt();
+    }
+
+    public static void calculatingCircleArea() {
 
         //Calculating and displaying Circle by its radius
-        System.out.println("Please enter circle radius");
-        Scanner scanner = new Scanner(System.in);
-        Double radius = scanner.nextDouble();
-        Double square = circle.calculateSquare(radius);
+        double radius = scannerInputDouble("Please enter circle radius");
+        double square = Circle.calculateSquare(radius);
         System.out.println("The circle square is " + square);
 
-        //Calculating the bigger circle by their area
-        System.out.println("Please enter radius of circle_1");
-        Scanner scannerCircle1 = new Scanner(System.in);
-        Double radius1 = scannerCircle1.nextDouble();
-        System.out.println("Please enter radius of circle_2");
-        Scanner scannerCircle2 = new Scanner(System.in);
-        Double radius2 = scannerCircle2.nextDouble();
-        circle.comparisonSquare(radius1, radius2);
+    }
+
+    public static void defineBiggerCircle() {
+
+        //Define wich circle has bigger area
+        double radius1 = scannerInputDouble("Please enter radius of circle_1");
+        double radius2 = scannerInputDouble("Please enter radius of circle_2");
+        Circle.comparisonSquare(radius1, radius2);
+    }
+
+    public static void isTriangleRightAngled() {
 
         //Checking if triangle is right-angled
-        System.out.println("Please enter the first side of triangle(a)");
-        Scanner scannerSideA = new Scanner(System.in);
-        Double a = scannerSideA.nextDouble();
-        System.out.println("Please enter the second side of triangle(b)");
-        Scanner scannerSideB = new Scanner(System.in);
-        Double b = scannerSideB.nextDouble();
-        System.out.println("Please enter the third side of triangle(c)");
-        Scanner scannerSideC = new Scanner(System.in);
-        Double c = scannerSideC.nextDouble();
-        Boolean rightAngledTriangleFlag = triangle.checkRightAngledTriangle(a, b, c);
+        double a = scannerInputDouble("Please enter the first side of triangle(a)");
+        double b = scannerInputDouble("Please enter the second side of triangle(b)");
+        double c = scannerInputDouble("Please enter the third side of triangle(c)");
+        String result = Triangle.checkRightAngledTriangle(a, b, c);
+        System.out.println(result);
+    }
 
-        if (rightAngledTriangleFlag == true) {
-            System.out.println("Triangle is right-angled");
-        }
-        else System.out.println("It is not right-angled triangle");
-
+    public static void evenOddNumber(){
 
         //Define if number is even or odd
-        System.out.println("Please enter the number");
-        Scanner scannerNumber = new Scanner(System.in);
-        Integer N = scannerNumber.nextInt();
-        if (number.evenNumber(N) == true){
-            System.out.println("Input number is even");
-        }
-        else System.out.println("Input number is odd");
+        int number = scannerInputInt("Please enter the number");
+        String result = Number.evenNumber(number);
+        System.out.println(result);
 
+    }
+
+    public static void biggerNumber(){
 
         //Define which number is bigger
-        System.out.println("Please enter number 1");
-        Scanner scannerNumber1 = new Scanner(System.in);
-        Integer N1 = scannerNumber1.nextInt();
-        System.out.println("Please enter number 1");
-        Scanner scannerNumber2 = new Scanner(System.in);
-        Integer N2 = scannerNumber2.nextInt();
-        System.out.println(number.compareNumbers(N1, N2));
-
-
-
-
-
-
-
-
+        int number1 = scannerInputInt("Please enter number 1");
+        int number2 = scannerInputInt("Please enter number 2");
+        String result = Number.compareNumbers(number1, number2);
+        System.out.println(result);
 
 
     }
+
 }
