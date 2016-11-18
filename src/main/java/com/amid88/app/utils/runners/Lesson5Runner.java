@@ -13,17 +13,65 @@ public class Lesson5Runner {
 
     public static void main(String args[]) {
 
-        calculatingCircleArea();
+       /* calculatingCircleArea();
         defineBiggerCircle();
         isTriangleRightAngled();
         evenOddNumber();
         biggerNumber();
+*/
+       menu();
     }
+
+    public static void menu(){
+
+        int parameterFlag = 1;
+        do {
+            int parameter = scannerInputAny("Welcome to program 'Lesson5'. Please choose one of options below: \n" + "\t"+
+                    "1. Right-angled triangle\n" +"\t" +
+                    "2. Define which circle is bigger\n" +"\t" +
+                    "3. Calculate circle area\n" + "\t" +
+                    "4. Define is number odd or even\n" + "\t" +
+                    "5. What number is bigger/smaller\n" + "\t" +
+                    "0. Exit from the program");
+            switch (parameter) {
+                case 0: parameterFlag = 0;
+                        break;
+                case 1:
+                    isTriangleRightAngled();
+                    break;
+                case 2:
+                    defineBiggerCircle();
+                    break;
+                case 3:
+                    calculatingCircleArea();
+                    break;
+                case 4:
+                    evenOddNumber();
+                    break;
+                case 5:
+                    biggerNumber();
+                    break;
+                default:
+                    parameterFlag = 1;
+                    System.out.println("Wrong input");
+                    break;
+            }
+            } while (parameterFlag != 0);
+
+        }
+
 
     public static double scannerInputDouble (String s){
         System.out.println(s);
         Scanner scannerS = new Scanner(System.in);
         return scannerS.nextDouble();
+    }
+
+    public static int scannerInputAny (String s){
+        System.out.println(s);
+        Scanner scannerS = new Scanner(System.in);
+        int scannerAny = Integer.parseInt(scannerS.nextLine());
+        return scannerAny;
     }
 
     public static int scannerInputInt (String s) {
@@ -75,7 +123,6 @@ public class Lesson5Runner {
         int number2 = scannerInputInt("Please enter number 2");
         String result = Number.compareNumbers(number1, number2);
         System.out.println(result);
-
 
     }
 
