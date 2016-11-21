@@ -12,23 +12,25 @@ import org.junit.runner.RunWith;
 public class MathFunctionsTest {
 
     @Test
-    @FileParameters(value = "src/test/resources/testdata.csv",
+    @FileParameters(value = "src/test/resources/Math/testDataMultiply.csv",
     mapper = CsvWithHeaderMapper.class)
-
-    public void dataProviderTestAdd(int argA, int argB, int expOut) {
+    public void multiplyTest(int argA, int argB, int expOut) {
         Assert.assertEquals(expOut, MathFunctions.multiply(argA, argB));
     } //make sure that variables are in same order and types as in csv file
 
 
     @Test
-    public void multiplyTest() {
-        Assert.assertEquals(6, MathFunctions.multiply(2,3));
+    @FileParameters(value = "src/test/resources/Math/testDataSubtraction.csv",
+    mapper = CsvWithHeaderMapper.class)
+    public void subtractionTest(int argA, int argB, int expOut) {
+        Assert.assertEquals(expOut, MathFunctions.subtraction(argA, argB));
     }
 
     @Test
-    public void subtractionTest() {
-        int res = MathFunctions.subtraction(5, 2);
-        Assert.assertEquals(res, 3);
+    @FileParameters(value = "src/test/resources/Math/testDataSum.csv",
+    mapper = CsvWithHeaderMapper.class)
+    public void sumTest(int argA, int argB, int expOut) {
+        Assert.assertEquals(expOut, MathFunctions.sum(argA, argB));
 
     }
 

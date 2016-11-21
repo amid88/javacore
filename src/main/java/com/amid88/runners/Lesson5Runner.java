@@ -89,7 +89,8 @@ public class Lesson5Runner {
         //Define wich circle has bigger area
         double radius1 = scannerInputDouble("Please enter radius of circle_1");
         double radius2 = scannerInputDouble("Please enter radius of circle_2");
-        Circle.comparisonSquare(radius1, radius2);
+        String res = Circle.comparisonSquare(radius1, radius2);
+        System.out.println(res);
     }
 
     public static void isTriangleRightAngled() {

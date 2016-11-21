@@ -12,21 +12,22 @@ public class Circle {
         return circleArea;
     }
 
-    public static void comparisonSquare (double radius1, double radius2){
+    public static String comparisonSquare (double radius1, double radius2){
 
         if (calculateSquare(radius1)> calculateSquare(radius2)) {
-            System.out.println("The square of circle_1 is bigger");
+            return "The square of circle_1 is bigger";
         }
         else {
             if (calculateSquare(radius1) == calculateSquare(radius2)){
-                System.out.println("Circle_1 has the same area as circle_2");
+                return "Circle_1 has the same area as circle_2";
             }
             else {
-                System.out.println("The square of circle_2 is bigger");
+                return "The square of circle_2 is bigger";
             }
             }
 
 
 
     }
+
 }

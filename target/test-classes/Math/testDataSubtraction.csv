@@ -1,0 +1,5 @@
+argumentA, argumentB, expectedResult
+10,2,8
+10,-2,12
+-10,-5,-5
+-5,3,-8
