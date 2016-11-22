@@ -22,9 +22,8 @@ public class HW_5Test {
     }
 
     @Test
-    @FileParameters(value = "src/test/resources/Menu/testDataCircleFirst.csv",
-    mapper = CsvWithHeaderMapper.class)
+    @FileParameters("src/test/resources/Menu/testDataCircleFirst.csv")
     public void comparisonCircleAreaFirst(double argA, double argB, String expOut){
-        Assert.assertTrue(Circle.comparisonSquare(argA, argB) == expOut);
+        Assert.assertTrue(Circle.comparisonSquare(argA, argB).equals(expOut));
     }
 }
