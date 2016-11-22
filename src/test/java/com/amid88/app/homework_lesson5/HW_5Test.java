@@ -4,7 +4,6 @@ import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
 import junitparams.mappers.CsvWithHeaderMapper;
 import org.junit.Assert;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -26,4 +25,17 @@ public class HW_5Test {
     public void comparisonCircleAreaFirst(double argA, double argB, String expOut){
         Assert.assertTrue(Circle.comparisonSquare(argA, argB).equals(expOut));
     }
+
+    @Test
+    @FileParameters("src/test/resources/Menu/testDataEvenNumber.csv")
+    public void evenNumberTest(int argA, String expOut){
+        Assert.assertTrue(Number.evenNumber(argA).equals(expOut));
+
+    }
+
+    @Test
+    public void circleCreateObjectTest(){
+        Circle circle = new Circle();
+    }
+
 }
