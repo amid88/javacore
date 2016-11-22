@@ -1,6 +1,6 @@
 package com.amid88.runners;
 
-import com.amid88.app.MathFunctions;
+import com.amid88.app.homework.lesson4.MathFunctions;
 
 /**
  * Created by dmitriy on 20.11.16.

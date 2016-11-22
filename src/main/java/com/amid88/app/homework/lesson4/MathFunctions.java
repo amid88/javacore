@@ -1,4 +1,4 @@
-package com.amid88.app;
+package com.amid88.app.homework.lesson4;
 
 /**
  * Created by dmitriy on 20.11.16.

@@ -1,4 +1,4 @@
-package com.amid88.app;
+package com.amid88.app.homework.lesson4;
 
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;

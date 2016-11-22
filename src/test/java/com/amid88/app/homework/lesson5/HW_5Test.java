@@ -1,4 +1,4 @@
-package com.amid88.app.homework_lesson5;
+package com.amid88.app.homework.lesson5;
 
 import junitparams.FileParameters;
 import junitparams.JUnitParamsRunner;
@@ -29,13 +29,29 @@ public class HW_5Test {
     @Test
     @FileParameters("src/test/resources/Menu/testDataEvenNumber.csv")
     public void evenNumberTest(int argA, String expOut){
-        Assert.assertTrue(Number.evenNumber(argA).equals(expOut));
-
+        Assert.assertTrue(com.amid88.app.homework.lesson5.Number.evenNumber(argA).equals(expOut));
     }
 
     @Test
     public void circleCreateObjectTest(){
         Circle circle = new Circle();
+    }
+
+    @Test
+    public void numberCreateObjectTest(){
+        Number number = new Number();
+    }
+
+    @Test
+    @FileParameters("src/test/resources/Menu/testDataCompereNumbers.csv")
+    public void compareNumbersTest(int argA, int argB, String expOut){
+        Assert.assertEquals(Number.compareNumbers(argA, argB), expOut);
+    }
+
+    @Test
+    @FileParameters("src/test/resources/Menu/testDataTriangle.csv")
+    public void checkRightAngledTriangleTest(int argA, int argB, int argC, String expOut){
+        Assert.assertEquals(Triangle.checkRightAngledTriangle(argA, argB, argC), expOut);
     }
 
 }

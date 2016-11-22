@@ -1,8 +1,8 @@
 package com.amid88.runners;
 
-import com.amid88.app.homework_lesson5.Circle;
-import com.amid88.app.homework_lesson5.Triangle;
-import com.amid88.app.homework_lesson5.Number;
+import com.amid88.app.homework.lesson5.Circle;
+import com.amid88.app.homework.lesson5.Triangle;
+import com.amid88.app.homework.lesson5.Number;
 
 import java.util.Scanner;
 
