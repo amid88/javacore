@@ -21,11 +21,10 @@ public class HW_5Test {
         Assert.assertEquals(expOut, Circle.calculateSquare(argA), 0.0001);
     }
 
-    @Ignore
     @Test
-    public void comparisonCircleAreaFirst(){
-        double radius1 = 5.66;
-        double radius2 = 5.661;
-        //Assert.asser
+    @FileParameters(value = "src/test/resources/Menu/testDataCircleFirst.csv",
+    mapper = CsvWithHeaderMapper.class)
+    public void comparisonCircleAreaFirst(double argA, double argB, String expOut){
+        Assert.assertTrue(Circle.comparisonSquare(argA, argB) == expOut);
     }
 }
