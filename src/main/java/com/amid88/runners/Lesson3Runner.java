@@ -1,6 +1,6 @@
 package com.amid88.runners;
 
-import com.amid88.app.homework_lesson3.PrimitiveConverter;
+import com.amid88.app.homework.lesson3.PrimitiveConverter;
 
 /**
  * Created by dstrashko on 11/15/16.

@@ -1,0 +1,11 @@
+a, b, c, Actual result
+-3, 4, 5, It is not right-angled triangle
+3, -4, 5, It is not right-angled triangle
+3, 4, -5, It is not right-angled triangle
+5, 4, 3, Triangle is right-angled
+10, 4, 3, It is not right-angled triangle
+4, 5, 3, Triangle is right-angled
+4, 20, 3, It is not right-angled triangle
+3, 4, 5, Triangle is right-angled
+3, 4, 15, It is not right-angled triangle
+3, 3, 3, It is not right-angled triangle

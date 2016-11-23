@@ -1,0 +1,11 @@
+
+.idea/
+/target/
+*.iml
+
+.DS_Store*
+*.iws
+ehthumbs.db
+Icon?
+/out/
+Thumbs.db
