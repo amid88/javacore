@@ -5,12 +5,21 @@ import junitparams.JUnitParamsRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 /**
  * Created by dstrashko on 11/23/16.
  */
-@RunWith(JUnitParamsRunner.class)
+
+@RunWith(value = Parameterized.class)
 public class NumberTest {
+    private int numberA, numberB, expected;
+
+    public NumberTest(int numberA, int numberB, int expected) {
+        this.numberA = numberA;
+        this.numberB = numberB;
+        this.expected = expected;
+    }
 
     @Test
     public void numberCreateObjectTest(){
