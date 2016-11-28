@@ -11,15 +11,8 @@ import org.junit.runners.Parameterized;
  * Created by dstrashko on 11/23/16.
  */
 
-@RunWith(value = Parameterized.class)
+@RunWith(JUnitParamsRunner.class)
 public class NumberTest {
-    private int numberA, numberB, expected;
-
-    public NumberTest(int numberA, int numberB, int expected) {
-        this.numberA = numberA;
-        this.numberB = numberB;
-        this.expected = expected;
-    }
 
     @Test
     public void numberCreateObjectTest(){

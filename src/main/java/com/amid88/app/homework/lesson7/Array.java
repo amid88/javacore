@@ -1,0 +1,117 @@
+package com.amid88.app.homework.lesson7;
+
+import java.util.Random;
+
+/**
+ * Created by dstrashko on 11/28/16.
+ */
+public class Array {
+
+    public static void arrayPrintOutEvenNumbers(){
+        int[] evenArray = new int[10];
+        int argA = 2;
+        int argB = 20;
+
+        //creating the array of even numbers where argA - first element, argB - last element
+        for (int i = 0; argA <= argB; i++){
+            evenArray[i] = argA;
+            argA +=2;
+        }
+
+        //evenArray output: all elements in one string
+        for (int arrElement : evenArray){
+            System.out.print(arrElement + " ");
+        }
+
+        //evenArray output: each element in new line
+        for (int arrElement : evenArray){
+            System.out.print("\n" + arrElement);
+        }
+    }
+
+    public static void arrayPrintOutOddNumbers(){
+        int[] oddArray = new int[50];
+        int argA = 1;
+        int argB = 99;
+
+        for (int i = 0; argA <= argB; i++ ){
+            oddArray[i] = argA;
+            argA+=2;
+        }
+
+        //oddArray output: from small to high order
+        for (int i = 0; i < oddArray.length; i++){
+            System.out.print(oddArray[i] + " ");
+        }
+
+        System.out.print("\n");
+
+        //oddArray output: from small to high order
+        for (int i = oddArray.length - 1; i >= 0; i--){
+            System.out.print(oddArray[i] + " ");
+        }
+
+    }
+
+    public static void calculateEvenOddNumbers(){
+        int[] array = new int[15];
+        int evenCounter = 0;
+        Random randomGenerator = new Random();
+
+
+        //generate array of random numbers
+        for (int i =0; i < array.length; i++){
+            array[i] = randomGenerator.nextInt(9);
+        }
+
+        //printOut array on the screen
+        for (int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+
+        //calculating even numbers in array
+        for (int i = 0; i < array.length; i++){
+            if (array[i] % 2 == 0){
+                evenCounter++;
+            }
+        }
+        System.out.print("\nThe amount of even numbers is: " + evenCounter);
+
+        }
+
+    public static void calculateMinMaxOfArray(){
+        int[] array = new int[15];
+        Random randomGenerator = new Random();
+
+        //generate array of random numbers
+        for (int i = 0; i < array.length; i++){
+            array[i] = randomGenerator.nextInt(999);
+        }
+
+        //calculate Min and Max elements of Array
+        int minElementOfArray = array [0];
+        int maxElementOfArray = array [0];
+        for (int i = 0; i < array.length; i++){
+            if (array[i] >= maxElementOfArray){ maxElementOfArray = array[i];}
+            if (array[i] <= minElementOfArray){ minElementOfArray = array[i];}
+        }
+
+        //printOut array on the screen
+        for (int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+        System.out.print("\nMax element of array is: " + maxElementOfArray);
+        System.out.print("\nMin element of array is: " +minElementOfArray);
+
+    }
+
+    public static void randomMatrix(){
+        int[][] matrix = new int[8][5];
+        Random randomGenerator = new Random();
+
+        randomGenerator.ints(10,999);
+
+
+    }
+
+}
