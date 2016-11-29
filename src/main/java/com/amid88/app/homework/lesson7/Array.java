@@ -142,4 +142,10 @@ public class Array {
         }
     }
 
+    public static void arrayMathOperations(){
+        int[] array = new int[0];
+
+
+    }
+
 }
