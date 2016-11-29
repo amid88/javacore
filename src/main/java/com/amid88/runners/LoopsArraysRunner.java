@@ -11,7 +11,8 @@ public class LoopsArraysRunner {
         //Array.arrayPrintOutEvenNumbers();
         //Array.arrayPrintOutOddNumbers();
         //Array.calculateEvenOddNumbers();
-        Array.calculateMinMaxOfArray();
+        //Array.calculateMinMaxOfArray();
+        Array.randomMatrix();
 
     }
 }
