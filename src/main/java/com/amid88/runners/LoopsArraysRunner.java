@@ -12,6 +12,7 @@ public class LoopsArraysRunner {
     public static void main(String arg[]){
 
         int parameterFlag = 1;
+
         do {
             int parameter = scannerInputAny("\nWelcome to program 'Lesson6'. Please choose one of options below: \n" + "\t"+
                     "1. Print out even numbers\n" +"\t" +
@@ -20,6 +21,7 @@ public class LoopsArraysRunner {
                     "4. Calculate min and max value of array\n" + "\t" +
                     "5. Random matrix\n" + "\t" +
                     "6. Random matrix with alignment to the right\n" + "\t" +
+                    "7. Calculating the sum of all input numbers\n" + "\t" +
                     "0. Exit from the program");
             switch (parameter) {
                 case 0: parameterFlag = 0;
@@ -43,6 +45,8 @@ public class LoopsArraysRunner {
                 case 6:
                     Array.randomMatrixWithAlignment();
                     break;
+                case 7:
+                    Array.sumOfElements();
                 default:
                     parameterFlag = 1;
                     System.out.println("Wrong input");

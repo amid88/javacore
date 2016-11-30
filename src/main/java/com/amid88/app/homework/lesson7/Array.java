@@ -1,6 +1,7 @@
 package com.amid88.app.homework.lesson7;
 
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -142,10 +143,39 @@ public class Array {
         }
     }
 
-    public static void arrayMathOperations(){
-        int[] array = new int[0];
+    public static void sumOfElements(){
+        boolean flag = true;
+        int sum = 0;
 
+        Scanner scanner = new Scanner(System.in);
 
+        while (flag == true) {
+            System.out.println("Enter the number or type 'exit' to stop input and see the sum of all numbers");
+            String stringInput = scanner.nextLine();
+
+            if (isParsable(stringInput)){
+                sum += Integer.parseInt(stringInput);
+            }
+            else {
+                if (stringInput.equals("exit")){
+                    flag = false;
+                }
+                else {
+                    System.out.println("Wrong input");
+                }
+            }
+        }
+        System.out.println("The sum of all elements is: " + sum);
+    }
+
+    public static boolean isParsable(String input){
+        boolean parsable = true;
+        try{
+            Integer.parseInt(input);
+        }catch(NumberFormatException e){
+            parsable = false;
+        }
+        return parsable;
     }
 
 }
