@@ -152,8 +152,15 @@ public class Array {
         while (flag == true) {
             System.out.println("Enter the number or type 'exit' to stop input and see the sum of all numbers");
             String stringInput = scanner.nextLine();
+            boolean isParsable = true;
 
-            if (isParsable(stringInput)){
+            try {
+                Integer.parseInt(stringInput);
+            }catch (NumberFormatException e){
+                isParsable = false;
+            }
+
+            if (isParsable){
                 sum += Integer.parseInt(stringInput);
             }
             else {
@@ -166,16 +173,6 @@ public class Array {
             }
         }
         System.out.println("The sum of all elements is: " + sum);
-    }
-
-    public static boolean isParsable(String input){
-        boolean parsable = true;
-        try{
-            Integer.parseInt(input);
-        }catch(NumberFormatException e){
-            parsable = false;
-        }
-        return parsable;
     }
 
 }
