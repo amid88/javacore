@@ -56,7 +56,7 @@ public class Lesson9Runner {
                     System.out.println("Wrong input");
                     break;
             }
-        } while (parameterFlag != false);
+        } while (parameterFlag == false);
 
 
     }

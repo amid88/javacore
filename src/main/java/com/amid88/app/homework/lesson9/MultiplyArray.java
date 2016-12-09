@@ -144,10 +144,9 @@ public class MultiplyArray {
             //System.out.println(resMatrix[0][i] + " * " + resMatrix[1][i] + " = " + resMatrix[2][i]);
         }
         return resMatrix;
-
-
-
-
     }
+
+
+
 
 }
