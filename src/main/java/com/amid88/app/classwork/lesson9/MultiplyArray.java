@@ -10,15 +10,20 @@ public class MultiplyArray {
 
 
         for (int i = 0; i < array.length; i++){
-            for (int j = 0; j < array.length - 1; j++){
+            for (int j = 0; j < array.length-1; j++){
                 if (array[j] > array[j+1]) {
-                    tempInt = array[j+1];
-                    array[j+1] = array[j];
-                    array[j] = tempInt;
+                    tempInt = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = tempInt;
+                    System.out.println("j = " + j + "; array[j] =" + array[j] + "array[j=1]" + array[j+1] + "temInt = " + tempInt);
                 }
+
             }
 
         }
+
+
+
 
 
         for (int i = 0; i < array.length; i++){
