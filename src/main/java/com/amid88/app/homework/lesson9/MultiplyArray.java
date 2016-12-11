@@ -52,7 +52,7 @@ public class MultiplyArray {
         for (int i = 0; i < inputArray.length; i++){
 
             int maxIndex = i;
-            for (int j = 0; j < inputArray.length; j++){
+            for (int j = i + 1; j < inputArray.length; j++){
                 if (inputArray[j] < inputArray[maxIndex] ){
                     maxIndex = j;
                 }
@@ -75,7 +75,7 @@ public class MultiplyArray {
         for (int i = 0; i < inputArray.length; i++){
 
             int minIndex = i;
-            for (int j = 0; j < inputArray.length; j++){
+            for (int j = i + 1; j < inputArray.length; j++){
                 if (inputArray[j] > inputArray[minIndex] ){
                     minIndex = j;
                 }
@@ -145,8 +145,4 @@ public class MultiplyArray {
         }
         return resMatrix;
     }
-
-
-
-
 }

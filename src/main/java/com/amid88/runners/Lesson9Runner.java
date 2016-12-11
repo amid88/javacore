@@ -16,16 +16,16 @@ public class Lesson9Runner {
 
 
         do {
-            int parameter = scannerInputAny("\nWelcome to program 'Lesson9'. Please choose one of options below: \n" + "\t"+
+            int parameter = scannerInputAny("\nWelcome to program 'Lesson9'. Please choose one of the options below: \n" + "\t"+
                     "1. Bubble-sort ascending\n" +"\t" +
-                    "2. Buble-sort descending\n" +"\t" +
+                    "2. Bubble-sort descending\n" +"\t" +
                     "3. Selected-sort ascending\n" + "\t" +
                     "4. Selected-sort descending\n" + "\t" +
                     "5. Generate random matrix\n" + "\t" +
                     "6. Generate multiplication table\n" + "\t" +
                     "0. Exit from the program");
             switch (parameter) {
-                case 0: parameterFlag = true;
+                case 0: parameterFlag = false;
                     System.out.println("Thank you for using our program. Bye!");
                     break;
                 case 1:
@@ -56,7 +56,7 @@ public class Lesson9Runner {
                     System.out.println("Wrong input");
                     break;
             }
-        } while (parameterFlag == false);
+        } while (parameterFlag == true);
 
 
     }
