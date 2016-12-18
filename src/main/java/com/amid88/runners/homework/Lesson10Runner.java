@@ -1,4 +1,4 @@
-package com.amid88.runners;
+package com.amid88.runners.homework;
 
 import com.amid88.app.homework.lesson7.Array;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by dmitriy on 25.11.16.
  */
-public class LoopsArraysRunner {
+public class Lesson10Runner {
 
     public static void main(String arg[]){
 

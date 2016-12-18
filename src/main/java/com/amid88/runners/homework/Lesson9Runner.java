@@ -1,8 +1,8 @@
-package com.amid88.runners;
+package com.amid88.runners.homework;
 
 import com.amid88.app.homework.lesson9.MultiplyArray;
 
-import static com.amid88.runners.LoopsArraysRunner.scannerInputAny;
+import static com.amid88.runners.homework.Lesson10Runner.scannerInputAny;
 
 /**
  * Created by dstrashko on 12/8/16.

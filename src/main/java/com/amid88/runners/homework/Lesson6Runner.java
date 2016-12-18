@@ -1,4 +1,4 @@
-package com.amid88.runners;
+package com.amid88.runners.homework;
 
 import com.amid88.app.homework.lesson6.Circle;
 import com.amid88.app.homework.lesson6.Triangle;

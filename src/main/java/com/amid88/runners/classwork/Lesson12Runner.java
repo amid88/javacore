@@ -1,4 +1,4 @@
-package com.amid88.runners;
+package com.amid88.runners.classwork;
 
 import java.io.IOException;
 

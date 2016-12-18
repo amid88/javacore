@@ -1,4 +1,4 @@
-package com.amid88.runners;
+package com.amid88.runners.classwork;
 
 import com.amid88.app.classwork.lesson11.StringSplit;
 
