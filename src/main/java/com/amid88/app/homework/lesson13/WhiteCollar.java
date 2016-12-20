@@ -22,12 +22,12 @@ public class WhiteCollar extends Human{
             for (int j = 0; j < alphabet.length(); j++) {
                 if (companyName.charAt(i) == alphabet.charAt(j)) flag = true;
             }
-            if (flag == false) {
+            if (!flag) {
                 System.out.println("Company name is invalid");
                 break;
             }
         }
-        if (flag == true ) this.companyName = companyName;
+        if (flag) this.companyName = companyName;
     }
 
     public String getCompanyName() {
