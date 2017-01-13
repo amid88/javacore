@@ -1,6 +1,7 @@
 package com.amid88.runners.homework;
 
 import com.amid88.app.homework.lesson6.Circle;
+import com.amid88.app.homework.lesson6.MenuItems;
 import com.amid88.app.homework.lesson6.Triangle;
 import com.amid88.app.homework.lesson6.Number;
 
@@ -18,32 +19,50 @@ public class Lesson6Runner {
 
     public static void menu(){
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         int parameterFlag = 1;
         do {
-            int parameter = scannerInputAny("Welcome to program 'Lesson5'. Please choose one of options below: \n" + "\t"+
+
+            System.out.println("Welcome to program 'Lesson5'. Please choose one of options below: \n" + "\t"+
                     "1. Right-angled triangle\n" +"\t" +
                     "2. Define which circle is bigger\n" +"\t" +
                     "3. Calculate circle area\n" + "\t" +
                     "4. Define is number odd or even\n" + "\t" +
                     "5. What number is bigger/smaller\n" + "\t" +
                     "0. Exit from the program");
-            switch (parameter) {
-                case 0: parameterFlag = 0;
+            Scanner scannerSt = new Scanner(System.in);
+            MenuItems menuItems = MenuItems.valueOf(scannerSt.nextLine());
+
+
+            switch (menuItems) {
+                case ZERO: parameterFlag = 0;
                     System.out.println("Thank you for using our program. Bye!");
                         break;
-                case 1:
+                case ONE:
                     isTriangleRightAngled();
                     break;
-                case 2:
+                case TWO:
                     defineBiggerCircle();
                     break;
-                case 3:
+                case THREE:
                     calculatingCircleArea();
                     break;
-                case 4:
+                case FOUR:
                     evenOddNumber();
                     break;
-                case 5:
+                case FIVE:
                     biggerNumber();
                     break;
                 default:

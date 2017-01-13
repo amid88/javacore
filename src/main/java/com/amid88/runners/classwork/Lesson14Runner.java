@@ -31,6 +31,6 @@ public class Lesson14Runner {
         stringStudents = builder.append(student1).append(student2).append(student3).append(student4).toString();
         System.out.println(stringStudents);
 
-        teacher1.setMark();
+        //teacher1.setMark();
     }
 }
