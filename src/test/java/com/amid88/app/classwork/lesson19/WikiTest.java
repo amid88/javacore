@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,8 @@ public class WikiTest {
     
     @Before
     public void setUp() throws Exception {
-        wd = new FirefoxDriver();
+        System.setProperty("webdriver.gecko.driver", "/home/dmitriy/Kit/javacore/GeckoDriver/geckodriver");
+        WebDriver wd = new FirefoxDriver();
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
     
