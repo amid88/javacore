@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Created by dmitriy on 13.12.16.
  */
-public class Exception {
+public class Exception extends Throwable {
 
     public static void fileReader() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader("/home/dmitriy/Kit/javacore/input.txt"));

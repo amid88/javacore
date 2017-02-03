@@ -1,5 +1,6 @@
 package com.amid88.app.homework.lesson19;
 
+import com.amid88.app.classwork.lesson12.Exception;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.AfterClass;
@@ -50,6 +51,11 @@ public class firstTestWikiLogIn {
     public void tearDown() {
         wd.quit();
     }
+
+
+
+
+
     
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
